@@ -25,7 +25,7 @@ async def servers():
 
 @bot.command(pass_context = True)
 async def invite() :
-	'''Shoot this command to conduct battles on ur Server'''
+	"""Invite me !!!(O^O)"""
 	s = 'To conduct Pokemon Battles in your server , Click following link :\nhttps://discordapp.com/api/oauth2/authorize?client_id=321134463675400192&scope=bot&permissions=0'
 	await bot.say(':+1:\n'+str(s))
 

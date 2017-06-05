@@ -31,4 +31,4 @@ async def invite() :
 
 
 	
-bot.run('MzIxMTM0NDYzNjc1NDAwMTky.DBZoKg.Jl1g867szwWoNQJoAd8KKSZYhPE')
+bot.run('token')

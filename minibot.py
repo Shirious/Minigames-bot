@@ -61,17 +61,14 @@ async def rps(ctx,n=1) :
 		if len(cc) == 1 and len(ch) == 1 :
 			await bot.say('{0} X {1}'.format(symbol[cc],symbol[ch]))
 			if ch == wins[cc] : 
-				await bot.say(':sparkles:**{}** wins!'.format(msg.author.display_name))
 				p2win +=1
 			elif cc == wins[ch] : 
-				await bot.say(':boom:**{}** wins!'.format(ctx.message.author.display_name))
 				p1win +=1
-			elif cc == ch :
-				await bot.say('tis a draw !')
 			else :
 				await bot.say('/tableflip')
 		else :
 			await bot.say('Play fair again!')
+			return
 		i+=1
 	if p1win > p2win : 
 		await bot.say(':boom:**{}** wins!'.format(ctx.message.author.display_name))
@@ -80,6 +77,6 @@ async def rps(ctx,n=1) :
 		await bot.say(':boom:**{}** wins!'.format(msg.author.display_name))
 		await bot.send_message(msg.author , ':sparkles:Congo! you win !!!!')
 	else : await bot.say('tis a draw !')
-
+	await bot.say('**xxxGame Overxxx**')
 	
 bot.run('token')

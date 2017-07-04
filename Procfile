@@ -1,1 +1,1 @@
-
+web: python minibot.py

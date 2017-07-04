@@ -12,8 +12,8 @@ bot = commands.Bot(description = 'Mini Games BoT' , command_prefix = '<<')
 def replacenums(s) :
 	dic = {
 	'1' : ':one:','2':':two:','3':':three:','4':':four:','5':':five:','6':':six:','7':':seven:','8':':eight:','9':':nine:' , 'X':':x:','O':':o:'
-	} 
-	dicc = ['1','2','3','4','5','6','7','8','9','X','O']
+	}#'a': ':regional_indicator_a:', 'p2': '  ', 'c': ':regional_indicator_c:', 'p1': '  ', 'e': ':regional_indicator_e:', 'd': ':regional_indicator_d:', 'g': ':regional_indicator_g:', 'f': ':regional_indicator_f:', 'i': ':regional_indicator_i:', 'h': ':regional_indicator_h:', 'k': ':regional_indicator_k:', 'j': ':regional_indicator_j:', 'l': ':regional_indicator_l:', 'b': ':regional_indicator_b:'}
+	dicc = ['1','2','3','4','5','6','7','8','9','X','O']#,'p1','a','b','c','d','e','f','p2','g','h','i','j','k','l']
 	for i in range(len(dicc)) :
 		s = s.replace(dicc[i],dic[dicc[i]])
 	return s
@@ -216,4 +216,11 @@ async def tictactoe(ctx,plyr) :
 			await bot.say(':sparkles:Winner is {}'.format(plyr2.name))
 			return 
 
-bot.run()
+@bot.command(pass_context = True)
+async def mancala(ctx) :
+	s = manacala_game.start()
+	s = '```'+s+'```'
+	em = discord.Embed(title = 'Mancala' , description = s , colour = discord.Colour(0xFFFFFF))
+	await bot.say(embed = em)
+	
+bot.run('MzIxMTM0NDYzNjc1NDAwMTky.DBZoKg.Jl1g867szwWoNQJoAd8KKSZYhPE')

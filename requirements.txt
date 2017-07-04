@@ -1,0 +1,6 @@
+discord
+re
+asyncio
+tictactoe2
+time
+random

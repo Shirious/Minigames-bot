@@ -222,7 +222,7 @@ def  robot() :
 					await bot.say(':sparkles:Winner is {}'.format(plyr2.name))
 					return 
 			
-	bot.run('MzIxMTM0NDYzNjc1NDAwMTky.DBZoKg.Jl1g867szwWoNQJoAd8KKSZYhPE')
+	bot.run('token')
 	return "exited"      #needed 
 
 if __name__ == '__main__':

@@ -3,7 +3,6 @@ import discord
 import asyncio
 from discord.ext import commands
 import tictactoe2
-import time
 import random
 import os
 #now for the flask
